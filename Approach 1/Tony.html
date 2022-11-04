@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#table tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+    <title>Library Management System</title>
+    <link rel="icon" href="lib_logo.webp" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="first">
+      <div class="h">
+        <h1 class="topic">Library Mangement System</h1>
+      </div>
+      <div class="search">
+        Search by name:
+        <input id="myInput" type="text" placeholder="Search.." />
+
+        <label for="auth">Choose an Author:</label>
+        <select onchange="location = this.value;">
+          <option>Select</option>
+          <option value="Library books.html">All</option>
+          <option value="Tom.html">Tom shelby</option>
+          <option value="Rob.html">Robert Downey</option>
+          <option value="Chris.html">Chris Evans</option>
+          <option value="Bruce.html">Bruce Banner</option>
+          <option value="Tony.html">Tony stark</option>
+        </select>
+        <label for="sub">Choose an Subject:</label>
+        <select onchange="location = this.value;">
+          <option>Select</option>
+          <option value="Library books.html">All</option>
+          <option value="Tom.html">Engineering</option>
+          <option value="Rob.html">Fluid</option>
+          <option value="Chris.html">Electrical</option>
+          <option value="Bruce.html">Computer</option>
+          <option value="Tony.html">Mechanical</option>
+        </select>
+        <label for="no">&nbsp; &nbsp;No. Of Books:4</label>
+      </div>
+    </div>
+
+    <div class="main">
+      <table class="table" cellspacing="20">
+        <tr class="first-row">
+          <td class="sno">S.NO</td>
+          <td class="title">TITLE</td>
+          <td class="author">AUTHOR</td>
+          <td class="Subject">SUBJECT</td>
+          <td class="published date">PUBLISHED DATE</td>
+        </tr>
+        <tbody id="table">
+          <tr>
+            <td>1.</td>
+            <td class="name">Mechanical vibrations</td>
+            <td>Tony stark</td>
+            <td>Mechanical</td>
+            <td>12.01.2002</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td class="name">Mechanical engineering design</td>
+            <td>Tony stark</td>
+            <td>Mechanical</td>
+            <td>02.01.2001</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+
+            <td class="name">Computer aided mechanical design</td>
+
+            <td>Tony stark</td>
+            <td>Mechanical</td>
+            <td>12.02.2011</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td class="name">Gate in mechanical engineering</td>
+            <td>Tony stark</td>
+            <td>Mechanical</td>
+            <td>09.01.2002</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </body>
+</html>

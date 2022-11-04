@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#table tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+    <title>Library Management System</title>
+    <link rel="icon" href="lib_logo.webp" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="first">
+      <div class="h">
+        <h1 class="topic">Library Mangement System</h1>
+      </div>
+
+      <div class="search">
+        Search by name:
+        <input id="myInput" type="text" placeholder="Search.." />
+        <label for="auth">Choose an Author:</label>
+        <select onchange="location = this.value;">
+          <option>Select</option>
+          <option value="Library books.html">All</option>
+          <option value="Tom.html">Tom shelby</option>
+          <option value="Rob.html">Robert Downey</option>
+          <option value="Chris.html">Chris Evans</option>
+          <option value="Bruce.html">Bruce Banner</option>
+          <option value="Tony.html">Tony stark</option>
+        </select>
+        <label for="sub">Choose an Subject:</label>
+        <select onchange="location = this.value;">
+          <option>Select</option>
+          <option value="Library books.html">All</option>
+          <option value="Tom.html">Engineering</option>
+          <option value="Rob.html">Fluid</option>
+          <option value="Chris.html">Electrical</option>
+          <option value="Bruce.html">Computer</option>
+          <option value="Tony.html">Mechanical</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="main">
+      <table class="table" cellspacing="20">
+        <tr class="first-row">
+          <td class="sno">S.NO</td>
+          <td class="title">TITLE</td>
+          <td class="author">AUTHOR</td>
+          <td class="Subject">SUBJECT</td>
+          <td class="published date">PUBLISHED DATE</td>
+        </tr>
+        <tbody id="table">
+          <tr>
+            <td>1.</td>
+            <td class="name">Advanced engineering mathematics</td>
+            <td>Tom shelby</td>
+            <td>Engineering</td>
+            <td>31.01.2022</td>
+          </tr>
+
+          <tr>
+            <td>2.</td>
+            <td class="name">Mechanical vibrations</td>
+            <td>Tony stark</td>
+            <td>Mechanical</td>
+            <td>12.01.2002</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td class="name">Compressible fluid flow</td>
+            <td>Robert Downey</td>
+            <td>Fluid</td>
+            <td>01.02.2022</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td class="name">Basic electrical engineering</td>
+            <td>Chris Evans</td>
+            <td>Electrical</td>
+            <td>21.12.2012</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td class="name">Java for computer information</td>
+            <td>Bruce Banner</td>
+            <td>Computer</td>
+            <td>09.01.2015</td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td class="name">A textbook of fluid mechanics</td>
+            <td>Robert Downey</td>
+            <td>Fluid</td>
+            <td>22.03.2011</td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td class="name">System engineering</td>
+            <td>Tom shelby</td>
+            <td>Engineering</td>
+            <td>24.12.2007</td>
+          </tr>
+          <tr>
+            <td>8.</td>
+            <td class="name">Mechanical engineering design</td>
+            <td>Tony stark</td>
+            <td>Mechanical</td>
+            <td>02.01.2001</td>
+          </tr>
+          <tr>
+            <td>9.</td>
+            <td class="name">Computer organization</td>
+            <td>Bruce Banner</td>
+            <td>Computer</td>
+            <td>10.01.2012</td>
+          </tr>
+          <tr>
+            <td>10.</td>
+            <td class="name">Electrical science</td>
+            <td>Chris Evans</td>
+            <td>Electrical</td>
+            <td>12.12.1999</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="navi">
+      <button>
+        <a href="Library books.html">1</a>
+      </button>
+      <button>
+        <a href="page2.html">2</a>
+      </button>
+      <p class="page">Page 1</p>
+    </div>
+  </body>
+</html>

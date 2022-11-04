@@ -1,0 +1,63 @@
+.topic {
+    display: inline-block;
+    
+    font-size:50px;
+    /* background-color: rgb(243, 233, 204); */
+  }
+  .h{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main {
+
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 400px;
+    width: 1000px;
+    border: 1px solid #ccc;
+    font: 16px/26px Georgia, Garamond, Serif;
+    overflow: auto;
+    border: 2px solid black;
+  }
+  .table {
+    margin: auto;
+  }
+  .title {
+    width: 316.438px;
+  }
+
+  .name {
+    text-align: left;
+
+  }
+  .navi {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .first-row {
+    /*border: 5px solid blue; */
+    background-color: rgb(151, 151, 200);
+    margin: auto;
+  }
+  .search {
+    text-align: center;
+    margin-bottom: 10px;
+    color: black;
+    font-weight:bold;
+  }
+  body {
+    background-image: url("lib_bg.jpeg");
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  h1{
+    color: rgb(0, 0, 0);
+  }
+  .page{
+  color: white;
+  }
